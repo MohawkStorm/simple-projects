@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #333;
+  color: whitesmoke;
+}
+
+.site-title {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  min-height: 400px;
+}
+
+.container div {
+  flex: 1 1 45%;
+  margin: 0 1rem;
+  text-align: center;
+  background-color: hsla(0, 2%, 25%, 0.26);
+  border-radius: 1rem;
+  position: relative;
+}
+
+.section-headers {
+  margin: 1rem 0 8rem 0;
+}
+
+.age-btn {
+  padding: 0.75rem 2rem;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.age-btn:hover {
+  opacity: 0.85;
+}
+
+#ageinput {
+  text-align: center;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}

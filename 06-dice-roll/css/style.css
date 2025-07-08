@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #333;
+  color: whitesmoke;
+}
+
+.site-title {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.container {
+  text-align: center;
+  margin: auto;
+  background-color: hsla(0, 1%, 26%, 0.212);
+  border-radius: 10px;
+  width: 70%;
+  min-height: 400px;
+  box-shadow: 3px 3px 8px hsla(0, 1%, 18%, 0.363);
+}
+
+#diceNumberInput {
+  margin: 1rem 0;
+  text-align: center;
+  width: 180px;
+  padding: 12px 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid #555;
+  border-radius: 10px;
+  background-color: #222;
+  color: #f0f0f0;
+  outline: none;
+}
+
+button {
+  text-align: center;
+  width: 150px;
+  padding: 12px 16px;
+  font-size: 1.2rem;
+  border: 2px solid #318bd4c4;
+  border-radius: 10px;
+  background-color: #318bd4;
+  color: #f0f0f0;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: hsla(207, 65%, 51%, 0.774);
+  border-color: #318bd4;
+}
+
+button:active {
+  background-color: #318bd4;
+  border-color: #318bd4;
+}
+
+.resultMessage {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.resultImage img {
+  width: 20%;
+  margin-bottom: 1rem;
+}

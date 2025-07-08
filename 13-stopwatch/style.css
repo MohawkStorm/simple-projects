@@ -1,0 +1,79 @@
+body {
+  background: hsla(0, 0%, 7%, 0.856);
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  color: #e0e0e0;
+}
+
+.container {
+  text-align: center;
+  background: hsla(0, 0%, 12%, 0.753);
+  padding: 3rem 6rem;
+  border-radius: 12px;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+.time-display {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  letter-spacing: 2px;
+  color: #f0f0f0;
+  user-select: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.start-btn {
+  background-color: #28a745;
+}
+
+.start-btn:hover {
+  background-color: #1e7e34;
+}
+
+.pause-btn {
+  background-color: #dc3545;
+}
+
+.pause-btn:hover {
+  background-color: #a71d2a;
+}
+
+.reset-btn {
+  background-color: #007bff;
+}
+
+.reset-btn:hover {
+  background-color: #0056b3;
+}
+
+.buttons button:disabled {
+  background-color: #555555;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.buttons button:active {
+  transform: scale(0.97);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}

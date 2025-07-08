@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #333;
+  color: whitesmoke;
+}
+
+.container {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-size: 5rem;
+  margin: 0 5rem;
+}
+
+h1 {
+  margin-bottom: 3rem;
+}
+
+#decreaseBtn,
+#increaseBtn {
+  font-size: 3rem;
+  width: 7rem;
+  border: none;
+  border-radius: 2rem;
+}
+
+#resetBtn {
+  margin-top: 3rem;
+  padding: 0.5rem 4rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 2rem;
+}
+
+button {
+  background-color: hsl(209, 88%, 60%);
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsla(209, 88%, 60%, 0.76);
+}
+
+button:active {
+  box-shadow: 0 0 5px hsla(209, 78%, 56%, 0.404);
+}

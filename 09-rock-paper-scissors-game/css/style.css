@@ -1,0 +1,46 @@
+body {
+  background-color: #272727;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.optionBtns {
+  height: 120px;
+  width: 120px;
+  background-color: transparent;
+  border-radius: 10rem;
+  border: 3px solid whitesmoke;
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+.optionBtns:hover {
+  cursor: pointer;
+  background-color: hsla(180, 100%, 50%, 0.116);
+}
+
+.optionBtns img {
+  height: 60px;
+}
+
+p {
+  margin: 2rem;
+}
+
+.resetScore,
+.autoPlay {
+  min-width: 160px;
+  font-size: inherit;
+  border: none;
+  padding: 0.25rem 0.75rem;
+  margin: 1rem 0.5rem;
+}
+
+.resetScore:hover,
+.autoPlay:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
