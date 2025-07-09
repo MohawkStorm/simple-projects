@@ -1,0 +1,32 @@
+feat(Project 13 - stopwatch): improve reset logic
+# feat = new feature added, here the reset button logic got better
+
+fix(Project 05 - login): fix password validation bug
+# fix = a bug fix, e.g. password validation was broken and now corrected
+
+chore(Project 21 - dashboard): update dependencies
+# chore = maintenance tasks, like updating libraries, not changing app code
+
+docs(Project 02 - api): add usage examples
+# docs = documentation changes, here adding examples to the API docs
+
+style(Project 08 - ui): adjust button colors
+# style = formatting, CSS changes, no logic changes; just UI polish
+
+refactor(Project 14 - api): simplify response handler
+# refactor = code restructuring without changing functionality, making code cleaner
+
+test(Project 07 - auth): add unit tests for login
+# test = adding or fixing tests, here new tests for login functionality
+
+perf(Project 12 - cache): optimize cache lookup speed
+# perf = performance improvements, making cache lookups faster
+
+ci(Project 09 - build): update CI pipeline to Node 18
+# ci = changes to Continuous Integration config or scripts
+
+build(Project 11 - packaging): configure webpack for prod
+# build = build system or packaging changes, like configuring webpack
+
+revert(Project 06 - payment): rollback broken feature toggle
+# revert = undo a previous commit, e.g. rollback a faulty feature
