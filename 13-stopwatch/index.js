@@ -67,12 +67,15 @@ document.querySelector(".pause-btn").addEventListener("click", pauseTime);
 // ******** Reset Button ******** //
 
 function resetTime() {
-  clearInterval(intervalId);
-  timerStart = null;
-  intervalId = null;
-  isPaused = false;
-  passedTime = 0;
-  displayTime.textContent = startingText;
+  if (intervalId || isPaused) {
+    pauseTime();
+    if (confirm("Are you sure you want to reset the stopwatch?")) {
+      timerStart = null;
+      isPaused = false;
+      passedTime = 0;
+      displayTime.textContent = startingText;
+    }
+  }
 }
 
 document.querySelector(".reset-btn").addEventListener("click", resetTime);
