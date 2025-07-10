@@ -107,7 +107,7 @@ buttons.forEach((button) => {
     } else {
       clearTimeout(setDisplayToDefault);
       disableOperatorButtons(false);
-      display.value += `${buttonValue}`;
+      display.value += buttonValue;
     }
   });
 });
