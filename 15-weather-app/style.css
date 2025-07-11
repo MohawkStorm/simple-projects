@@ -1,0 +1,132 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #1e1e2f, #2c2c3e);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #eee;
+}
+
+.container {
+  background: #2d2d3a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 300px;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: #f0f0f0;
+}
+
+.search-box {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #1f1f2a;
+  color: #fff;
+}
+
+input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.weather-result {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.weather-info {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 1.75rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #f1f1f1;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.location-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #6db4ff;
+}
+
+.temp {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffa07a;
+  margin-bottom: 0.3rem;
+}
+
+.details p {
+  margin: 0.2rem 0;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.details p.feels-like {
+  color: #999;
+  font-style: italic;
+}
+
+.weather-info img {
+  margin-top: 1rem;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.temp-unit-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 123, 255, 0.8); /* main blue with opacity */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.temp-unit-btn:hover {
+  background-color: rgba(0, 86, 179, 0.9); /* darker blue on hover */
+}
