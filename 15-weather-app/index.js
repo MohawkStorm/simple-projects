@@ -47,12 +47,18 @@ function userLocationinput() {
 
 // ****** Generate and render the weather HTML based on current data ****** //
 async function generateHTML() {
-  userLocation = userLocationinput();
-  url = `https://api.openweathermap.org/data/2.5/weather?q=${userLocation}&APPID=${apiKey}&units=metric`;
-  const weatherData = await apiFetch(url);
-  lastWeatherData = weatherData;
-  renderHTML(weatherData);
-  document.querySelector(".locationInput").value = "";
+  try {
+    userLocation = userLocationinput();
+    url = `https://api.openweathermap.org/data/2.5/weather?q=${userLocation}&APPID=${apiKey}&units=metric`;
+    const weatherData = await apiFetch(url);
+    lastWeatherData = weatherData;
+    renderHTML(weatherData);
+    document.querySelector(".locationInput").value = "";
+  } catch (error) {
+    document.querySelector(
+      ".weather-result"
+    ).innerHTML = `<p class="error">Location not found. Please try again.</p>`;
+  }
 }
 
 // ****** Render weather data to the DOM ****** //
