@@ -1,6 +1,14 @@
 async function fetchFromAPI(url) {
-  const response = await fetch(url);
-  return await response.json();
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Error status: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("Fetch error:", error);
+    return;
+  }
 }
 
 async function getCurrencyFullName() {
@@ -10,9 +18,10 @@ async function getCurrencyFullName() {
   return namesObject;
 }
 
-async function fetchExchangeRates() {
+async function fetchExchangeRates(currency) {
+  let baseCurrency = currency ? currency : "USD";
   const ratesObject = await fetchFromAPI(
-    "https://api.frankfurter.dev/v1/latest?base=USD"
+    `https://api.frankfurter.dev/v1/latest?base=${baseCurrency}`
   );
   return ratesObject;
 }
@@ -23,10 +32,10 @@ function getCountryFlagImg(currencyCode) {
     .trim()}.svg`;
 }
 
-async function generateData() {
+async function generateData(currency) {
   let mainData = [];
   const countryNames = await getCurrencyFullName();
-  let exchangeRates = await fetchExchangeRates();
+  let exchangeRates = await fetchExchangeRates(currency);
   exchangeRates = Object.entries(exchangeRates.rates);
   exchangeRates.forEach(([code, rate]) => {
     const desc = countryNames[code];
@@ -36,11 +45,14 @@ async function generateData() {
   return mainData;
 }
 
-async function generateHTML() {
-  const mainData = await generateData();
+async function generateHTML(currency) {
+  const mainData = await generateData(currency);
+  let baseCurrency = currency ? currency : "USD";
+  const countryNames = await getCurrencyFullName();
+  const baseCurrencyFullName = countryNames[baseCurrency] || "";
   let html = ``;
   mainData.forEach((data) => {
-    html += `<div class="rates-row">
+    html += `<div class="rates-row" data-currency="${data.currency}" title="Click to select ${data.currency} as Base Currency">
                     <div class="rates-cell">${data.currency}</div>
                     <div class="rates-cell description-cell">
                         <img src="${data.img}"
@@ -51,5 +63,17 @@ async function generateHTML() {
               `;
   });
   document.querySelector(".rates-data-container").innerHTML = html;
+  document.querySelector(
+    ".base-currency-html"
+  ).innerHTML = ` <h2>Base Currency: <span id="baseCurrency">${baseCurrency}(${baseCurrencyFullName})</span></h2>`;
 }
+
+const container = document.querySelector(".rates-data-container");
+container.addEventListener("click", (event) => {
+  const clickedRow = event.target.closest(".rates-row");
+  if (!clickedRow) return;
+  const selectedCurrency = clickedRow.dataset.currency;
+  generateHTML(selectedCurrency);
+});
+
 generateHTML();

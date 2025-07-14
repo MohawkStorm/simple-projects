@@ -74,6 +74,17 @@ header h2 {
   gap: 1rem;
 }
 
+.rates-data-container:hover .rates-row:hover {
+  cursor: pointer;
+  background-color: hsla(267, 95%, 76%, 0.144);
+}
+
+.rates-data-container:active .rates-row:active {
+  background-color: hsla(267, 95%, 76%, 0.363);
+}
+.rates-row {
+  transition: background-color 0.3s ease;
+}
 .rates-cell {
   white-space: normal;
   flex-shrink: 0;
