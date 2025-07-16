@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <h1>Exchange Rates</h1>
     <div id="ratesContainer">
         <div id="exchangeApp">
@@ -18,6 +19,14 @@
                 </div>
 
             </header>
+
+            <div class="search-container">
+                <input type="text" class="currencySearch" placeholder="Search base currency (code or country)..."
+                    autocomplete="off" />
+                <ul class="suggestions-list">
+                </ul>
+            </div>
+
             <div class="rates-table">
                 <div class="rates-row rates-header">
                     <div class="rates-cell">Currency</div>
